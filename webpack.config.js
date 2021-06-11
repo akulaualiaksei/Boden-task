@@ -10,7 +10,7 @@ module.exports = {
   mode: process.env.NODE_ENV || 'development',
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   devServer: {
     contentBase: path.join(__dirname, './dist'),
@@ -39,10 +39,10 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    splitChunks: { chunks: 'all' },
-    minimize: true,
-  },
+  // optimization: {
+  //   splitChunks: { chunks: 'all' },
+  //   minimize: true,
+  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
