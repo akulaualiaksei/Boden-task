@@ -6,12 +6,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'index.jsx'),
+  entry: [
+    'whatwg-fetch',
+    '@babel/polyfill',
+    path.join(__dirname, 'src', 'index.jsx'),
+  ],
   mode: process.env.NODE_ENV || 'development',
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, './dist'),
     historyApiFallback: true,

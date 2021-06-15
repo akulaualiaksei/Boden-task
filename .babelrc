@@ -4,13 +4,43 @@
         "corejs": { "version":3 },
         "useBuiltIns": "usage",
         "targets": {
-            "ie": "11",
-            "esmodules": true
+          "browsers": ["ie >= 11", "last 2 versions"]
         }
     }],
-      ["@babel/react"]
+      ["@babel/preset-react"]
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-async-do-expressions",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-transform-runtime"
   ]
 }
+// {
+//   "presets": [
+//     ["env", {
+//       "targets": {
+//         "browsers": [
+//           "Chrome >= 59",
+//           "FireFox >= 44",
+//           "Safari >= 7",
+//           "Explorer 11",
+//           "last 4 Edge versions"
+//         ]
+//       },
+//       "useBuiltIns": true
+//     }],
+//     "react",
+//     "stage-1"
+//   ],
+//   "ignore": [
+//     "node_modules"
+//   ],
+//   "plugins": [
+//     "transform-es2015-arrow-functions",
+//     "@babel/plugin-proposal-class-properties",
+//     "syntax-class-properties"
+//   ]
+// }
