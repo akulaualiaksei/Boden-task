@@ -1,3 +1,6 @@
+// import 'isomorphic-fetch';
+import 'cross-fetch/polyfill';
+
 const request = async (method, url) => {
   const reqParams = {
     method: `${method}`,
@@ -7,7 +10,6 @@ const request = async (method, url) => {
     },
   };
   const response = await fetch(`${url}`, reqParams);
-  console.log(response);
   return response;
 };
 

@@ -1,0 +1,71 @@
+@import '../../_variables.scss';
+
+.product-item {
+  width: 100%;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  // background-color: red;
+  .product-item__image-container {
+    display: flex;
+    width: 20%;
+  }
+  .product-item__image {
+    width: 100%;
+  }
+
+  .product-item__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // background: aliceblue;
+    .product-item__name {
+      font-size: 1.125rem;
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+    .description__item {
+      margin-bottom: 1rem;
+      color: $textMediumColor;
+      span {
+        color: $textColor;
+      }
+    }
+  }
+  .product-item__cart {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    .product-item__price {
+      font-weight: 900;
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+  }
+
+  .product-item__button {
+    padding: 0.7em 1.5em;
+    color: $textColorLight;
+    background: $accentColor;
+    border-radius: 0.3em;
+    border: none;
+    outline: none;
+    transition: background 0.1s, color 0.1s;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      color: #ffffff;
+      background: #ff0a37;
+      cursor: pointer;
+    }
+  }
+}
+
+.currency {
+  margin-left: 0.5rem;
+}
