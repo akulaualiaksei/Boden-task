@@ -70,7 +70,7 @@ export const fetchProducts = (REQUEST_URL) => async (dispatch) => {
     const { data } = await response.json();
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
-    dispatch(fetchProductsFail(JSON.stringify(error)));
+    dispatch(fetchProductsFail(error.toString()));
     dispatch(fetchFailUploadFakeData(fakeData));
     console.error(error);
   }
