@@ -1,0 +1,61 @@
+@import '../../_variables.scss';
+
+.product-item-grid {
+  width: 15.6rem;
+  height: 25.81rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 2rem 3rem;
+
+  .product-item-grid__image-container {
+    display: flex;
+  }
+
+  .product-item-grid__image {
+    width: 100%;
+  }
+
+  .product-item-grid__name {
+    font-size: 1.375rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .product-item-grid__price {
+    font-weight: 900;
+    font-size: 1.875rem;
+    margin: 0;
+  }
+
+  .product-item-grid__button {
+    padding: 1.1rem 3.3rem;
+    color: $textColorLight;
+    background: $accentColor;
+    border-radius: 0.3em;
+    border: none;
+    outline: none;
+    transition: background 0.1s, color 0.1s;
+    font-size: 1.25rem;
+    margin: 0;
+
+    &:hover {
+      color: #ffffff;
+      background: #ff0a37;
+      cursor: pointer;
+    }
+  }
+}
+
+.currency {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 380px) {
+  .product-item-grid {
+    .product-item-grid__button {
+      padding: 1rem 2rem;
+    }
+  }
+}

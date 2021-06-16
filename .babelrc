@@ -1,13 +1,14 @@
 {
   "presets": [
+      "@babel/preset-react",
       ["@babel/env", {
         "corejs": { "version":3 },
         "useBuiltIns": "usage",
+        "modules": "commonjs",
         "targets": {
-          "browsers": ["ie >= 11", "last 2 versions"]
+          "browsers": ["last 2 versions", "ie >= 11"]
         }
-    }],
-      ["@babel/preset-react"]
+    }]
   ],
   "plugins": [
     "@babel/plugin-proposal-async-do-expressions",
@@ -18,29 +19,3 @@
     "@babel/plugin-transform-runtime"
   ]
 }
-// {
-//   "presets": [
-//     ["env", {
-//       "targets": {
-//         "browsers": [
-//           "Chrome >= 59",
-//           "FireFox >= 44",
-//           "Safari >= 7",
-//           "Explorer 11",
-//           "last 4 Edge versions"
-//         ]
-//       },
-//       "useBuiltIns": true
-//     }],
-//     "react",
-//     "stage-1"
-//   ],
-//   "ignore": [
-//     "node_modules"
-//   ],
-//   "plugins": [
-//     "transform-es2015-arrow-functions",
-//     "@babel/plugin-proposal-class-properties",
-//     "syntax-class-properties"
-//   ]
-// }

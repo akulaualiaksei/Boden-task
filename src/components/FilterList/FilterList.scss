@@ -1,8 +1,98 @@
-.catalog-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 4rem 2rem;
+@import '../../_variables.scss';
+
+.filters {
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  padding: 2rem 2.4rem;
   width: 100%;
   height: 100%;
+}
+.filter {
+  margin-bottom: 36px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $textMediumColor;
+  .filter__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    .product-count {
+      color: $textMediumColor;
+    }
+  }
+
+  .checkbox-label {
+    padding-left: 1rem;
+    font-size: 1.44rem;
+  }
+
+  .filter-category-list__item {
+    font-size: 24px;
+  }
+}
+
+.filter__name-container {
+  display: flex;
+  justify-content: space-between;
+  .filter__name-icon {
+    font-size: 1.5rem;
+    color: $textMediumColor;
+    .fas.fa-chevron-up {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .filter__name {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 2.5rem;
+    padding-left: 0.25rem;
+  }
+}
+
+.show-more__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 0 24px 0;
+  font-size: 25px;
+  color: #0b5ffe;
+}
+
+.filter-list_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-price {
+  // width: 12.8rem;
+  width: 47%;
+  height: 4.56rem;
+  font-size: 1.56rem;
+  padding-left: 1.55rem;
+}
+
+.input-price__separator {
+  font-size: 2.94rem;
+  align-self: center;
+  font-weight: 200;
+  color: $textMediumColor;
+  padding: 0 0.25rem;
+}
+
+input[type='checkbox'] {
+  width: 1.81rem;
+  height: 1.81rem;
+  border: 5px solid $textMediumColor;
+}
+
+@media only screen and (max-width: 1600px) {
+  .input-price {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
 }

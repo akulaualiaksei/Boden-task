@@ -6,11 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: [
-    'whatwg-fetch',
-    '@babel/polyfill',
-    path.join(__dirname, 'src', 'index.jsx'),
-  ],
+  entry: ['core-js/stable', path.join(__dirname, 'src', 'index.jsx')],
   mode: process.env.NODE_ENV || 'development',
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -44,10 +40,10 @@ module.exports = {
       },
     ],
   },
-  // optimization: {
-  //   splitChunks: { chunks: 'all' },
-  //   minimize: true,
-  // },
+  optimization: {
+    splitChunks: { chunks: 'all' },
+    minimize: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),

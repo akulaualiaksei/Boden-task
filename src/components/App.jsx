@@ -1,7 +1,8 @@
 import React from "react";
-import Header from './Header';
+import Header from './Header/Header';
 import Modal from './Modal/Modal';
-import Main from './Main';
+import Main from './Main/Main';
+import Footer from "./Footer";
 
 const App = () => {
   return(
@@ -9,7 +10,9 @@ const App = () => {
       <Modal/>
       <Header/>
       <Main/>
+      <Footer/>
     </>
-)};
+  )
+};
 
 export default App;

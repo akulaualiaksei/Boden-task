@@ -2,5 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2.5rem 3rem;
+  padding: 9.56rem 0;
+}
+.products-list-grid {
+  padding: 9.56rem 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .products-list {
+    padding: 2rem 0;
+  }
+  .products-list-grid {
+    padding: 2rem 0;
+  }
 }

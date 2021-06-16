@@ -2,12 +2,14 @@ import {
   FETCH_PRODUCTS_START,
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_FAIL,
+  CHANGE_LIST_VIEW,
 } from './types';
 
 const initialState = {
   products: [],
   isFetching: false,
   error: null,
+  isGridView: false,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -28,6 +30,11 @@ const appReducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         error: action.payload,
+      };
+    case CHANGE_LIST_VIEW:
+      return {
+        ...state,
+        isGridView: action.payload,
       };
 
     default:

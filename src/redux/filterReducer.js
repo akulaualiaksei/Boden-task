@@ -1,6 +1,7 @@
 import {
   SET_CHECKBOX_FILTER_CATEGORY,
   REMOVE_CHECKBOX_FILTER_CATEGORY,
+  SET_ALL_CATEGORIES,
 } from './types';
 
 const initialState = {
@@ -15,7 +16,7 @@ const filtersReducer = (state = initialState, action) => {
         ...state,
         filters: [...state.categories, action.categories],
       };
-    case 'SET_ALL_CATEGORIES':
+    case SET_ALL_CATEGORIES:
       return {
         ...state,
         filters: [...state.categories, action.categories],

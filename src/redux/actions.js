@@ -6,15 +6,19 @@ import {
   HIDE_MODAL,
   SET_CHECKBOX_FILTER_CATEGORY,
   REMOVE_CHECKBOX_FILTER_CATEGORY,
+  CHANGE_LIST_VIEW,
+  SET_ALL_CATEGORIES,
 } from './types';
 
 import request from '../helpers/request';
 
 export const fetchProductsStart = () => ({ type: FETCH_PRODUCTS_START });
+
 export const fetchProductsSuccess = (data) => ({
   type: FETCH_PRODUCTS_SUCCESS,
   payload: data,
 });
+
 export const fetchProductsFail = (error) => ({
   type: FETCH_PRODUCTS_FAIL,
   payload: error,
@@ -25,7 +29,7 @@ export const setCheckboxFilter = (category) => ({
   payload: category,
 });
 export const setAllCategories = (category) => ({
-  type: 'SET_ALL_CATEGORIES',
+  type: SET_ALL_CATEGORIES,
   payload: category,
 });
 
@@ -38,8 +42,14 @@ export const setModal = (modal) => ({
   type: SET_MODAL,
   payload: modal,
 });
+
 export const hideModal = () => ({
   type: HIDE_MODAL,
+});
+
+export const changeListView = (data) => ({
+  type: CHANGE_LIST_VIEW,
+  payload: data,
 });
 
 export const fetchProducts = (REQUEST_URL) => async (dispatch) => {
@@ -47,9 +57,11 @@ export const fetchProducts = (REQUEST_URL) => async (dispatch) => {
 
   try {
     const response = await request('GET', REQUEST_URL);
+    if (!response.ok) throw new Error(response.statusText);
     const { data } = await response.json();
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
-    dispatch(fetchProductsFail(error));
+    dispatch(fetchProductsFail(JSON.stringify(error)));
+    console.error(error);
   }
 };

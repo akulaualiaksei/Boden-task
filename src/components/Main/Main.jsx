@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts } from '../redux/actions';
-import REQUEST_URL from '../constant';
-import ProductsList from './ProductsList/ProductsList';
-import SwitcherButton from './SwitcherButton/SwitcherButton';
-import FiltersList from './FilterList/FiltersList';
-import { getAllProducts } from '../redux/selectors';
+import { fetchProducts } from '../../redux/actions';
+import REQUEST_URL from '../../constant';
+import ProductsList from '../ProductsList/ProductsList';
+import SwitcherButton from '../SwitcherButton/SwitcherButton';
+import FiltersList from '../FilterList/FiltersList';
+import { getAllProducts } from '../../redux/selectors';
 import './Main.scss';
 
 const Main = () => {
