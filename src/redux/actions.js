@@ -8,9 +8,14 @@ import {
   REMOVE_CHECKBOX_FILTER_CATEGORY,
   CHANGE_LIST_VIEW,
   SET_ALL_CATEGORIES,
+  FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
 } from './types';
 
+import jsonData from '../responce.json';
+
 import request from '../helpers/request';
+
+const { data: fakeData } = jsonData;
 
 export const fetchProductsStart = () => ({ type: FETCH_PRODUCTS_START });
 
@@ -22,6 +27,10 @@ export const fetchProductsSuccess = (data) => ({
 export const fetchProductsFail = (error) => ({
   type: FETCH_PRODUCTS_FAIL,
   payload: error,
+});
+export const fetchFailUploadFakeData = (data) => ({
+  type: FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
+  payload: data,
 });
 
 export const setCheckboxFilter = (category) => ({
@@ -62,6 +71,7 @@ export const fetchProducts = (REQUEST_URL) => async (dispatch) => {
     dispatch(fetchProductsSuccess(data));
   } catch (error) {
     dispatch(fetchProductsFail(JSON.stringify(error)));
+    dispatch(fetchFailUploadFakeData(fakeData));
     console.error(error);
   }
 };

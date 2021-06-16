@@ -3,6 +3,7 @@ import {
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_FAIL,
   CHANGE_LIST_VIEW,
+  FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
 } from './types';
 
 const initialState = {
@@ -30,6 +31,11 @@ const appReducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         error: action.payload,
+      };
+    case FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA:
+      return {
+        ...state,
+        products: action.payload,
       };
     case CHANGE_LIST_VIEW:
       return {
