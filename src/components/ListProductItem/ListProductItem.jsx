@@ -4,25 +4,24 @@ import './ListProductItem.scss';
 import { useDispatch } from 'react-redux';
 import { setModal } from '../../redux/actions';
 
-const ProductItem = ({
+const ListProductItem = ({
   name,
-  img,
+  image,
   price,
   ean,
   upc,
   categories,
   tags,
-  id
 }) => {
 
   const dispatch = useDispatch();
 
   return(
-    <article className='product-item' key={id}>
+    <>
       <div className='product-item__image-container'>
         <img
           className='product-item__image'
-          src={img}
+          src={image}
           alt={name}
         />
       </div>
@@ -57,21 +56,19 @@ const ProductItem = ({
           <span> В корзину </span>
         </button>
       </div>
-    </article>
+    </>
   )
 }
 
-ProductItem.propTypes = {
+ListProductItem.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
-  img: PropTypes.string,
+  image: PropTypes.string,
   price: PropTypes.string,
   ean: PropTypes.string,
   upc: PropTypes.string,
-  key: PropTypes.number,
-  id: PropTypes.number,
   categories: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.string)
 }
 
-export default ProductItem;
+export default ListProductItem;

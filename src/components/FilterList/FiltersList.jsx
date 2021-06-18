@@ -51,14 +51,14 @@ const FiltersList = () => {
         </span>
       </div>
         <ul className='filter__items'>
-          { dataFilterCategory ? dataFilterCategory.map(({name, count}, index) => (
+          { dataFilterCategory.length > 0 && dataFilterCategory.map(({name, count}, index) => (
             <li className='filter__item' key={name} onClick={()=> onClick(name)}>
               <input type='checkbox' id={`${name}-${index}`}/>
               <label className='checkbox-label' htmlFor={`${name}-${index}`}>
                 {name} <span className='product-count'>{`${count}`}</span>
               </label>
             </li>
-          )) : <div> refresh page </div>}
+          ))}
 
         </ul>
       </div>
@@ -70,7 +70,7 @@ const FiltersList = () => {
           </span>
         </div>
         <ul className='filter__items'>
-            { dataBrandCategory ? dataBrandCategory.map(({name, count}, index) => (
+            { dataBrandCategory.length > 0 && dataBrandCategory.map(({name, count}, index) => (
               <li className='filter__item' key={name} onClick={()=> onClick(name)}>
                 <input type='checkbox' id={`${name}-${index}`}/>
                 <label className='checkbox-label' htmlFor={`${name}-${index}`}>
@@ -78,7 +78,7 @@ const FiltersList = () => {
                 </label>
               </li>
             ))
-            : <div> refresh page </div>}
+            }
           </ul>
           <button className='show-more__button'>Показать еще</button>
       </div>
@@ -90,9 +90,9 @@ const FiltersList = () => {
           </span>
         </div>
         <div className='filter-list_container'>
-          <input type="text" className="input-price first" value='343'/>
+          <input type="text" className="input-price first" defaultValue='343'/>
           <span className='input-price__separator'>-</span>
-          <input type="text" className="input-price second" value='199 990'/>
+          <input type="text" className="input-price second" defaultValue='199 990'/>
         </div>
       </div>
     </div>

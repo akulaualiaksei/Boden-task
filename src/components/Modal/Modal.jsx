@@ -18,7 +18,7 @@ const Modal = () => {
     <div className="modal-overlay"
       onClick={() => dispatch(hideModal())}
     >
-      <div className="modal">
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <i className="fas fa-times modal-close"
           onClick={() => dispatch(hideModal())}
         >
