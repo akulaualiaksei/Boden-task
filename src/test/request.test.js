@@ -10,6 +10,7 @@ test('request work', async () => {
   );
 
   expect(await request('test')).toEqual([]);
+  expect(await request('test')).toHaveLength(0);
 
   global.fetch = originalFetch;
 });

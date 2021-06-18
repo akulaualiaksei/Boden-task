@@ -1,11 +1,11 @@
 import React from 'react';
-import './SwitcherButton.scss';
+import './SwitchButton.scss';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { getSwitcherValue } from '../../redux/selectors';
 import { changeListView } from '../../redux/actions';
 
-const SwitcherButton = () => {
+const SwitchButton = () => {
 
   const isOn = useSelector(getSwitcherValue);
 
@@ -35,9 +35,9 @@ const SwitcherButton = () => {
     </div>
   )};
 
-  SwitcherButton.propTypes = {
+  SwitchButton.propTypes = {
     isOn: PropTypes.bool,
     handleToggle: PropTypes.func
   }
 
-export default SwitcherButton;
+export default SwitchButton;

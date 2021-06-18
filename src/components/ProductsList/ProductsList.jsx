@@ -48,7 +48,7 @@ const ProductsList = () => {
           )
         })
         :
-          <div> error from API </div>
+          <div className='loading'> Loading... </div>
         }
       </div>
 )};

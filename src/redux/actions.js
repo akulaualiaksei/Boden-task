@@ -8,7 +8,7 @@ import {
   FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
 } from './types';
 
-import REQUEST_URL from '../constant';
+import { REQUEST_URL } from '../constant';
 
 import jsonData from '../response.json';
 
@@ -56,6 +56,5 @@ export const fetchProducts = () => async (dispatch) => {
   } catch (error) {
     dispatch(fetchProductsFail(error.toString()));
     return dispatch(fetchFailUploadFakeData(fakeData));
-    // console.error(error);
   }
 };

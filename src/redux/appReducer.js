@@ -5,13 +5,7 @@ import {
   CHANGE_LIST_VIEW,
   FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
 } from './types';
-
-const initialState = {
-  products: [],
-  isFetching: false,
-  error: null,
-  isGridView: false,
-};
+import { AppReducerInitialState as initialState } from '../constant';
 
 const appReducer = (state = initialState, action) => {
   switch (action.type) {

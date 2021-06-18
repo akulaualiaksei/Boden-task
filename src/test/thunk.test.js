@@ -2,8 +2,13 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import * as actions from '../redux/actions';
-import * as types from '../redux/types';
-import REQUEST_URL from '../constant';
+import {
+  FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
+  FETCH_PRODUCTS_FAIL,
+  FETCH_PRODUCTS_START,
+  FETCH_PRODUCTS_SUCCESS,
+} from '../redux/types';
+import { REQUEST_URL } from '../constant';
 import jsonData from '../response.json';
 
 const { data: fakeData } = jsonData;
@@ -23,9 +28,9 @@ describe('check thunk action', () => {
     });
 
     const expectedActions = [
-      { type: types.FETCH_PRODUCTS_START },
+      { type: FETCH_PRODUCTS_START },
       {
-        type: types.FETCH_PRODUCTS_SUCCESS,
+        type: FETCH_PRODUCTS_SUCCESS,
         payload: ['test product 1', 'test product 2'],
       },
     ];
@@ -38,29 +43,23 @@ describe('check thunk action', () => {
   });
 
   it('create FETCH_PRODUCTS_FAIL when get response', () => {
-    const originalFetch = global.fetch;
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: false,
-        statusText: 'Server Error',
-      })
-    );
+    fetchMock.getOnce(REQUEST_URL, {
+      throws: new Error('Internal Server Error'),
+    });
 
     const expectedActions = [
-      { type: types.FETCH_PRODUCTS_START },
+      { type: FETCH_PRODUCTS_START },
       {
-        type: types.FETCH_PRODUCTS_FAIL,
+        type: FETCH_PRODUCTS_FAIL,
         payload: 'Error: Internal Server Error',
       },
       {
-        type: types.FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
+        type: FETCH_PRODUCTS_FAIL_UPLOAD_FAKE_DATA,
         payload: fakeData,
       },
     ];
 
     const store = mockStore({ products: [] });
-
-    global.fetch = originalFetch;
 
     return store.dispatch(actions.fetchProducts()).then(() => {
       expect(store.getActions()).toEqual(expectedActions);

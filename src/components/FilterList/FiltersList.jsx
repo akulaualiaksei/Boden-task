@@ -1,40 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setModal } from '../../redux/actions';
+import { dataFilterCategory, dataBrandCategory } from '../../constant';
 import './FilterList.scss';
-
-const dataFilterCategory = [
-  {
-    name: 'Смартфоны',
-    count: 774,
-  },
-  {
-    name: 'iPhone',
-    count: 124,
-  }
-]
-const dataBrandCategory = [
-  {
-    name: 'Samsung',
-    count: 168,
-  },
-  {
-    name: 'Apple',
-    count: 124,
-  },
-  {
-    name: 'Xiaomi',
-    count: 102,
-  },
-  {
-    name: 'Honor',
-    count: 88,
-  },
-  {
-    name: 'Huawei',
-    count: 62,
-  }
-]
 
 const FiltersList = () => {
 
