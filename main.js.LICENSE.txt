@@ -1,3 +1,153 @@
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./FilterList.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./GridProductItem.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./Header.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./ListProductItem.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./Main.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./Modal.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./ProductsList.scss */
+
+/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./SwitchButton.scss */
+
+/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./index.scss */
+
+/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! ../../../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */
+
+/*! ../../constant */
+
+/*! ../../redux/actions */
+
+/*! ../../redux/selectors */
+
+/*! ../FilterList/FiltersList */
+
+/*! ../GridProductItem/GridProductItem */
+
+/*! ../ListProductItem/ListProductItem */
+
+/*! ../ProductsList/ProductsList */
+
+/*! ../SwitchButton/SwitchButton */
+
+/*! ../constant */
+
+/*! ../helpers/request */
+
+/*! ../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */
+
+/*! ../response.json */
+
+/*! ./FilterList.scss */
+
+/*! ./Footer */
+
+/*! ./GridProductItem.scss */
+
+/*! ./Header.scss */
+
+/*! ./Header/Header */
+
+/*! ./ListProductItem.scss */
+
+/*! ./Main.scss */
+
+/*! ./Main/Main */
+
+/*! ./Modal.scss */
+
+/*! ./Modal/Modal */
+
+/*! ./ProductsList.scss */
+
+/*! ./SwitchButton.scss */
+
+/*! ./appReducer */
+
+/*! ./components/App */
+
+/*! ./index.scss */
+
+/*! ./modalReducer */
+
+/*! ./redux/store */
+
+/*! ./types */
+
+/*! @babel/runtime/helpers/asyncToGenerator */
+
+/*! @babel/runtime/helpers/defineProperty */
+
+/*! @babel/runtime/helpers/interopRequireDefault */
+
+/*! @babel/runtime/helpers/typeof */
+
+/*! @babel/runtime/regenerator */
+
+/*! core-js/modules/es.array.concat.js */
+
+/*! core-js/modules/es.array.filter.js */
+
+/*! core-js/modules/es.array.iterator.js */
+
+/*! core-js/modules/es.array.join.js */
+
+/*! core-js/modules/es.array.map.js */
+
+/*! core-js/modules/es.function.name.js */
+
+/*! core-js/modules/es.object.get-own-property-descriptor.js */
+
+/*! core-js/modules/es.object.get-own-property-descriptors.js */
+
+/*! core-js/modules/es.object.keys.js */
+
+/*! core-js/modules/es.object.to-string.js */
+
+/*! core-js/modules/es.promise.js */
+
+/*! core-js/modules/es.regexp.to-string.js */
+
+/*! core-js/modules/es.string.iterator.js */
+
+/*! core-js/modules/es.symbol.description.js */
+
+/*! core-js/modules/es.symbol.js */
+
+/*! core-js/modules/es.weak-map.js */
+
+/*! core-js/modules/web.dom-collections.for-each.js */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! cross-fetch/polyfill */
+
+/*! prop-types */
+
+/*! react */
+
+/*! react-dom */
+
+/*! react-redux */
+
+/*! redux */
+
+/*! redux-devtools-extension */
+
+/*! redux-thunk */
+
 /*!***********************!*\
   !*** ./src/index.jsx ***!
   \***********************/
@@ -11,7 +161,7 @@
   \*************************/
 
 /*!***************************!*\
-  !*** ./src/responce.json ***!
+  !*** ./src/response.json ***!
   \***************************/
 
 /*!****************************!*\
@@ -50,10 +200,6 @@
   !*** ./src/redux/modalReducer.js ***!
   \***********************************/
 
-/*!************************************!*\
-  !*** ./src/redux/filterReducer.js ***!
-  \************************************/
-
 /*!**************************************!*\
   !*** ./src/components/Main/Main.jsx ***!
   \**************************************/
@@ -90,17 +236,17 @@
   !*** ./src/components/ProductsList/ProductsList.jsx ***!
   \******************************************************/
 
+/*!******************************************************!*\
+  !*** ./src/components/SwitchButton/SwitchButton.jsx ***!
+  \******************************************************/
+
 /*!*******************************************************!*\
   !*** ./src/components/ProductsList/ProductsList.scss ***!
   \*******************************************************/
 
-/*!**********************************************************!*\
-  !*** ./src/components/SwitcherButton/SwitcherButton.jsx ***!
-  \**********************************************************/
-
-/*!***********************************************************!*\
-  !*** ./src/components/SwitcherButton/SwitcherButton.scss ***!
-  \***********************************************************/
+/*!*******************************************************!*\
+  !*** ./src/components/SwitchButton/SwitchButton.scss ***!
+  \*******************************************************/
 
 /*!************************************************************!*\
   !*** ./src/components/GridProductItem/GridProductItem.jsx ***!
@@ -142,9 +288,9 @@
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/ProductsList/ProductsList.scss ***!
   \************************************************************************************************************************************/
 
-/*!****************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SwitcherButton/SwitcherButton.scss ***!
-  \****************************************************************************************************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/SwitchButton/SwitchButton.scss ***!
+  \************************************************************************************************************************************/
 
 /*!******************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/GridProductItem/GridProductItem.scss ***!
