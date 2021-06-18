@@ -2,13 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import appReducer from './appReducer';
-import filtersReducer from './filterReducer';
 import modalReducer from './modalReducer';
 
 const rootReducer = combineReducers({
   modal: modalReducer,
   products: appReducer,
-  filters: filtersReducer,
 });
 
 const store = createStore(
