@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  height: calc(100vh - 150px);
+}
+.menu {
+  width: 25%;
+  min-width: 20rem;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2.85rem;
+  width: 75%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .products {
+    width: 100%;
+  }
+  .menu {
+    width: 100%;
+  }
+}

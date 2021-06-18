@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "corejs": { "version":3 },
+      "useBuiltIns": "usage",
+      "modules": "commonjs",
+      "targets": {
+        "browsers": ["last 2 versions", "ie >= 11"],
+        "node": "current"
+      }
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-async-do-expressions",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-transform-runtime"
+  ]
+}
